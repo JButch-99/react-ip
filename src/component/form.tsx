@@ -2,6 +2,7 @@ import { type SubmitEvent } from "react";
 import { type ProductInfo } from "./type";
 type newSubmissionFormProps = {
   onSubmitItem: (Product: ProductInfo) => void;
+  initialProduct: Partial<ProductInfo >
 }
 
 

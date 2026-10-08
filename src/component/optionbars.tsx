@@ -1,5 +1,5 @@
-
-
+import { useState } from "react"
+import { products, type ProductInfo, type CartItem } from "./type"
 
 function OptionBar() {
   return(
