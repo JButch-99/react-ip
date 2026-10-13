@@ -73,7 +73,7 @@ export const products: ProductInfo[] = [
   },
   {
     id: "iconoclastic-desires",
-    name: "Ragnorok Hard Brew",
+    name: "Ragnarok Hard Brew",
     stock: 50,
     healthIntel: "Must be 18+ to purchase and consume. Limit 1 per customer. Cannot be drunk if having pre-existing heart conditions",
     price: 19999,

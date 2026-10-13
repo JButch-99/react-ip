@@ -1,11 +1,12 @@
 import './../css/App.css'
-import OptionBar from './optionbars'
 import Heading from './logo'
+import ProductControlHub from './ProductHub'
+
 function App() {
   return (
     <div className='grid-body'>
       <Heading />
-      <OptionBar />
+      <ProductControlHub />
     </div>
   )
 }

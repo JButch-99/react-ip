@@ -1,5 +1,5 @@
 
-import { products, type ProductInfo, type CartItem } from "./type"
+import { products, type ProductInfo} from "./type"
 
 type OptionProps = {
   onSelectProduct: (product: ProductInfo) => void;
@@ -24,7 +24,7 @@ function OptionBar({onSelectProduct}: OptionProps) {
         ))}
       </div>
     </>
-  )
+  );
 }
 
 export default OptionBar 

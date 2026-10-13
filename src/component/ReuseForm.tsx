@@ -1,20 +1,26 @@
 import { type SubmitEvent } from "react";
 import { type ProductInfo } from "./type";
 
-type Overlay = {
+type OverlayProps = {
   formSubmissionHandler: (event: SubmitEvent<HTMLFormElement>) => void;
   buttonText: string;
-  defaultValue: ProductInfo
+  defaultInfo?: ProductInfo
 }
 
-function GraftedForm({formSubmissionHandler, buttonText, defaultValue}: Overlay) {
+function GraftedForm({formSubmissionHandler, buttonText}: OverlayProps) {
   return (
     <form onSubmit={formSubmissionHandler}>
       <input 
         type="text"
         name="id"
       />
+      <input 
+        type="number"
+        name=""
+      />
       <button>{buttonText}</button>
     </form>
   )
 }
+
+export default GraftedForm
