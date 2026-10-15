@@ -31,7 +31,6 @@ export const products: ProductInfo[] = [
     id: "happy-munchkin-coffee",
     name: "Happy Munchkin Coffee",
     stock: 999, 
-    healthIntel: "",
     manufacturer: "Sour Skittles Drink Inc.",
     price: 399,
     category: "Regular"
@@ -40,7 +39,6 @@ export const products: ProductInfo[] = [
     id: "inner-peace-coffee",
     name: "Inner Peace Coffee",
     stock: 999,
-    healthIntel: "",
     manufacturer: "Milton Brand Incorporated",
     price: 599,
     category: "Regular"

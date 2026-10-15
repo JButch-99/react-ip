@@ -3,7 +3,7 @@ import { type ProductInfo } from "./type";
 import GraftedForm from "./ReuseForm";
 type newSubmissionFormProps = {
   onSubmitItem: (Product: ProductInfo) => void;
-  initialProduct: Partial<ProductInfo >
+  initialProduct?: Partial<ProductInfo >
 }
 
 
