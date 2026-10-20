@@ -8,11 +8,17 @@ import ListCartItems from "./CartBar";
 function ProductControlHub() {
   const [cartList, setCartList] = useState<CartItem[]>([]);
   const [selectedProduct, setSelectedProduct] = useState<ProductInfo | null>(null);
+  // const [savedList, setSavedList] = useState<CartItem[]>([]);
+  const cartPriceFinder = cartList.find(item => item.product.id === selectedProduct?.id)?.pounds ?? 0;
+  
   
   function handleSelectingProduct(product: ProductInfo) {
     setSelectedProduct(product);
   }
 
+  // function handleSavingOrder() {
+
+  // }
 
   function clearCart() {
     setCartList([]);
@@ -36,8 +42,24 @@ function ProductControlHub() {
     setCartList(prev => prev.map(item => item.product.id === productId ? {...item, pounds: aim} : item))
   }
 
-  function handleAddingNewInfo(product: ProductInfo) {
-    setCartList(prev => [...prev, {product, pounds: 0}])
+  function handleAddingNewInfo(product: ProductInfo, pounds: number) {
+    if (Number.isNaN(pounds) || pounds <= 0) return;
+
+    const amountList = Math.min(pounds, product.stock);
+
+    setCartList(prev => {
+      const evident = prev.some(item => item.product.id === product.id);
+
+      if (!evident) {
+        return [...prev, {product, pounds: amountList}];
+      }
+
+      return prev.map(item =>
+        item.product.id === product.id
+        ? {...item, pounds: Math.min(item.pounds + amountList, product.stock) }
+        : item
+      )
+    })
   }
 
   return (
@@ -45,9 +67,13 @@ function ProductControlHub() {
         <OptionBar onSelectProduct={handleSelectingProduct} />
         
         {selectedProduct && (
-          <ProductDetailed
-            product={selectedProduct}
-          />
+          <div className="body8">
+            <ProductDetailed
+              product={selectedProduct}
+              key={selectedProduct.id}
+              status={selectedProduct.stock - cartPriceFinder}
+            />
+          </div>
         )}
 
         <ListCartItems 
@@ -57,8 +83,12 @@ function ProductControlHub() {
           onChangingPounds={handlePoundUpdate}
         />
 
-        <NewSubmissionForm onSubmitItem={handleAddingNewInfo}/>
-      </>
+        <NewSubmissionForm 
+        onSubmitItem={handleAddingNewInfo}
+        key={selectedProduct?.id}
+        product={selectedProduct}
+        />
+      </>  
     )
 }
 

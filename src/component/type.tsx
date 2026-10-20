@@ -16,6 +16,8 @@ export type CartItem = {
   pounds: number
 }
 
+
+
 export const products: ProductInfo[] = [
   {
     id: "lucky-day-coffee",

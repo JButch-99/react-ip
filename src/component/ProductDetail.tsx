@@ -1,14 +1,16 @@
+
 import { type ProductInfo } from "./type";
 import placeholder from "./../assets/placeholder_logo.png"
 type ProductDetailedProp = {
   product: ProductInfo;
+  status: number;
 }
 
-function ProductDetailed({product}: ProductDetailedProp) {
-
+function ProductDetailed({product, status}: ProductDetailedProp) {
+  const finalizedPrice = (product.price / 100).toFixed(2); 
   return (
     <>
-      <div className="product_detail body8">
+      <div className="product_detail">
         <div className="row">
           <div className="col-md-6">
             <div className="section">
@@ -16,8 +18,8 @@ function ProductDetailed({product}: ProductDetailedProp) {
                 <h1 className="title">{product.name}</h1>
               </div>
               <div className="base">
-                <p>Number Available: {product.stock} lb</p><br/>
-                <p>Price: {(product.price).toFixed(2)} per pound</p>
+                <p>Number Available: {status} lb</p><br/>
+                <p>Price: {finalizedPrice} per pound</p>
                 <p>Type: {product.category}</p>
               </div>
             </div>
@@ -25,7 +27,7 @@ function ProductDetailed({product}: ProductDetailedProp) {
           <div className="col-md-6">
             <div className="base">
               <p>{(product.manufacturer)}</p>
-              <img src={product.logo ?? placeholder} alt={`${product.name} logo`} />
+              <img src={product.logo ?? placeholder} className="photo" alt={`${product.name} logo`} />
             </div>
           </div>
           <div className="health">

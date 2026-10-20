@@ -116,6 +116,10 @@ code {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(7, 1fr);
+  min-height: 100vh;
+  margin: 5%;
+  padding: 2%;
+  background-color: green;
 }
 
 .body1 {
@@ -128,6 +132,13 @@ code {
 
 .body3 {
 grid-area: 1/4/2/6
+}
+
+.body2, .body3, .body4 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-content: flex-start;
 }
 
 .body4 {
@@ -148,4 +159,50 @@ grid-area: 1/4/2/6
 
 .body8 {
   grid-area: 2/2/8/7;
+}
+
+.photo {
+  max-width: 100%;
+  height: auto;
+  border: solid black 3px;
+  border-radius: 30px;
+  background-color: #aa3bff;  
+  padding: 5%;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5px
+}
+
+button {
+  background: gray;
+  color: white;
+  border: solid black 3px;
+  border-radius: 60px;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+}
+
+.section {
+  border: solid black 3px;
+  background-color: grey;
+  text-align: center;
+}
+
+.box h1 {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.box {
+  text-align: center;
 }
