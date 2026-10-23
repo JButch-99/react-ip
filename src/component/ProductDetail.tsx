@@ -1,4 +1,3 @@
-
 import { type ProductInfo } from "./type";
 import placeholder from "./../assets/placeholder_logo.png"
 type ProductDetailedProp = {

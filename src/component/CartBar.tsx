@@ -12,26 +12,10 @@ function ListCartItems({cartList, onChangingPounds, onRemoveItem, onClear}:CartB
   return (
     <>
       <div className="body7">
-        <div className="list">
-          {cartList.map(item => (
-            <div key={item.product.id} className="#">
-              <p>{item.product.name}</p>
-              <p>{item.pounds}</p>
-              <p>{(item.product.price * item.pounds).toFixed(2)}</p>
-              <button onClick={() => onChangingPounds(item.product.id, item.pounds - 1)}>-</button>
-              <button 
-              onClick={() => onChangingPounds(item.product.id, item.pounds + 1)} 
-              disabled={item.pounds >= item.product.stock}>
-                +
-                </button>
-              <button onClick={() => onRemoveItem(item.product.id)}>Remove Item</button>
-            </div>
-          ))}
-        </div>
         <div className="final">
           <div className="box">
             <h1>
-              Total: {totalSum}
+              "Total: {totalSum} lb"
             </h1>
             <p>
               Number of Items: {cartList.length}
@@ -43,6 +27,26 @@ function ListCartItems({cartList, onChangingPounds, onRemoveItem, onClear}:CartB
             <button onClick={() => null}>Share your Purchase</button>
           </div>
         </div>
+        
+        {cartList.length === 0 && <p className="empty-vessel">"Cart is currently empty"</p>}
+        {cartList.length > 0 && (
+          <div className="list scroll">
+            {cartList.map(item => (
+                <div key={item.product.id} className={`${cartList.length > 0 ? 'listing' : ""}`}>
+                  <p>{item.product.name}</p>
+                  <p>{item.pounds}</p>
+                  <p>{((item.product.price * item.pounds) / 100).toFixed(2)}</p>
+                  <button onClick={() => onChangingPounds(item.product.id, item.pounds - 1)}>-</button>
+                  <button 
+                  onClick={() => onChangingPounds(item.product.id, item.pounds + 1)} 
+                  disabled={item.pounds >= item.product.stock}>
+                    +
+                  </button>
+                <button onClick={() => onRemoveItem(item.product.id)}>Remove Item</button>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </>
   )

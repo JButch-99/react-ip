@@ -8,17 +8,12 @@ import ListCartItems from "./CartBar";
 function ProductControlHub() {
   const [cartList, setCartList] = useState<CartItem[]>([]);
   const [selectedProduct, setSelectedProduct] = useState<ProductInfo | null>(null);
-  // const [savedList, setSavedList] = useState<CartItem[]>([]);
   const cartPriceFinder = cartList.find(item => item.product.id === selectedProduct?.id)?.pounds ?? 0;
   
   
   function handleSelectingProduct(product: ProductInfo) {
     setSelectedProduct(product);
   }
-
-  // function handleSavingOrder() {
-
-  // }
 
   function clearCart() {
     setCartList([]);
@@ -36,6 +31,8 @@ function ProductControlHub() {
 
     if (aim <= 0) {
       setCartList(prev => prev.filter(item => item.product.id !== productId));
+      return;
+    } else if (aim > target.product.stock) {
       return;
     }
 

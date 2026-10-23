@@ -1,7 +1,10 @@
+
+
 :root {
   --text: #6b6375;
   --text-h: #08060d;
   --bg: #fff;
+  --space: 0.75rem;
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
   --accent: #aa3bff;
@@ -62,9 +65,7 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-}
+
 
 h1,
 h2 {
@@ -112,18 +113,26 @@ code {
 
 /* Grid Body Layout */
 
+
+
 .grid-body {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(7, 1fr);
-  min-height: 100vh;
-  margin: 5%;
-  padding: 2%;
-  background-color: green;
+  grid-template-rows: repeat(7, 0, 1fr);
+  padding: var(--space);
+  gap: var(--space);
+  height: 100vh;
+  background: linear-gradient(white, lightblue, cyan, blue);
 }
 
 .body1 {
   grid-area: 1/1/2/2;
+  background-color: silver;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 0;
+
 }
 
 .body2 {
@@ -149,16 +158,36 @@ grid-area: 1/4/2/6
   grid-area: 2/1/4/2;
 }
 
+.body5 input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .body6 {
   grid-area: 4/1/8/2;
 }
 
 .body7 {
   grid-area: 2/7/8/8;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 0;
 }
 
 .body8 {
   grid-area: 2/2/8/7;
+  color: white;
+}
+
+.body2, .body3, .body4, .body5,.body6, .body8 {
+  padding: var(--space);
+  background: rgb(0  0  0 / 40%);
+}
+
+.body1, .body2, .body3, .body4, .body5,.body6, .body7,.body8 {
+  border: solid black 1px;
+  
 }
 
 .photo {
@@ -166,34 +195,10 @@ grid-area: 1/4/2/6
   height: auto;
   border: solid black 3px;
   border-radius: 30px;
-  background-color: #aa3bff;  
-  padding: 5%;
-}
-
-.menu {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5px
-}
-
-button {
-  background: gray;
-  color: white;
-  border: solid black 3px;
-  border-radius: 60px;
-  padding: 0.5rem 0.75rem;
-  cursor: pointer;
-}
-
-.section {
-  border: solid black 3px;
-  background-color: grey;
-  text-align: center;
-}
-
-.box h1 {
-  font-size: 1.5rem;
-  margin: 0.5rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #aa3bff;
 }
 
 .menu {
@@ -203,6 +208,80 @@ button {
   align-items: center;
 }
 
-.box {
+button {
+  background: silver;
+  color: black;
+  border: solid black 3px;
+  border-radius: 60px;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  font-style: italic;
+  font-weight: 800;
+}
+
+.section {
+  border: solid black 3px;
+  background-color: grey;
   text-align: center;
 }
+
+.box h1, .product_detail h1 {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem;
+  color: black;
+}
+
+.box {
+  text-align: center;
+  margin: 0px;
+  padding: var(--space);
+  border-radius: 16px;
+}
+
+.list {
+  border-radius: 16px;
+  padding: var(--space);
+  background-color: #c084fc;
+}
+
+.listing {
+  margin: calc(var(--space) / 2) 0;
+  padding: calc(var(--space) / 2);
+  background: rgb(0  0  0 / 40%);
+  color: white;
+
+}
+
+.final {
+  padding: 5%;
+  margin: 6%;
+  background-color: lightcyan;
+  border: solid black 3px;
+}
+
+
+.scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex: 1;
+  max-height: 100%;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.health {
+  border: solid black 3px;
+  padding: 3px;
+  margin-top: 125px;
+}
+

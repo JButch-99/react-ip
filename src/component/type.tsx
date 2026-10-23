@@ -1,5 +1,12 @@
-import placeholder from './../assets/placeholder_logo.png'
 
+import Happy from './../assets/HappyMunchkin.jpg';
+import Lucky from './../assets/LuckyDays.jpg';
+import Inner from './../assets/InnerPeace.jpg';
+import Peace from './../assets/PeacefulPines.jpg';
+import Timid from './../assets/TimidTrees.jpg';
+import Devilish from './../assets/Twisted.jpg';
+import Unity from './../assets/LastOfUs.jpg';
+import Wishful from './../assets/Dreams.jpg';
 export type ProductInfo = {
   id: string
   name: string
@@ -27,7 +34,7 @@ export const products: ProductInfo[] = [
     manufacturer: "Milton Brand Incorporated",
     price: 100,
     category: "Regular",
-    logo: placeholder
+    logo: Lucky
   },
   {
     id: "happy-munchkin-coffee",
@@ -35,7 +42,8 @@ export const products: ProductInfo[] = [
     stock: 999, 
     manufacturer: "Sour Skittles Drink Inc.",
     price: 399,
-    category: "Regular"
+    category: "Regular",
+    logo: Happy
   },
   {
     id: "inner-peace-coffee",
@@ -43,7 +51,8 @@ export const products: ProductInfo[] = [
     stock: 999,
     manufacturer: "Milton Brand Incorporated",
     price: 599,
-    category: "Regular"
+    category: "Regular",
+    logo: Inner
   },
   {
     id: "timid-tree-coffee",
@@ -51,7 +60,8 @@ export const products: ProductInfo[] = [
     stock: 999,
     manufacturer: "LayFrito Inc",
     price: 1099,
-    category: "Decaf"
+    category: "Decaf",
+    logo: Timid
   },
   {
     id: "peaceful-pines-coffee",
@@ -60,7 +70,8 @@ export const products: ProductInfo[] = [
     manufacturer: "Milton Brand Inc.",
     healthIntel: "Do not drink while on medication",
     price: 2999,
-    category: "Decaf"
+    category: "Decaf",
+    logo: Peace
   },
   {
     id: "sleepy-meadow-drink",
@@ -69,7 +80,8 @@ export const products: ProductInfo[] = [
     manufacturer: "Cordy Exceptional Inc",
     healthIntel: "Please do not seek out underground or cold, damp places 24 hours post consumption",
     price: 99,
-    category: "Decaf"
+    category: "Decaf",
+    logo: Unity
   },
   {
     id: "iconoclastic-desires",
@@ -78,7 +90,8 @@ export const products: ProductInfo[] = [
     healthIntel: "Must be 18+ to purchase and consume. Limit 1 per customer. Cannot be drunk if having pre-existing heart conditions",
     price: 19999,
     category: "Specialty",
-    manufacturer: "Twisted Delights Inc."
+    manufacturer: "Twisted Delights Inc.",
+    logo: Devilish
   },
   {
     id: "wishful-dreams-coffee",
@@ -87,6 +100,7 @@ export const products: ProductInfo[] = [
     healthIntel: "Sign a waiver before consumption. Ensure you are thinking of your deepest desires in your heart of hearts while drinking.",
     price: 1,
     category: "Specialty",
-    manufacturer: "N/A"
+    manufacturer: "N/A",
+    logo: Wishful
   }
 ]

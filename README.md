@@ -1,75 +1,38 @@
-# React + TypeScript + Vite
+# _Coffee Shop Website_
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### By **JButch_99** 
 
-Currently, two official plugins are available:
+#### _This is a test project made from using the lessons in Fidgetech's React Course. NOTE: This project does use generative AI for the product images used._ 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Technologies Used
 
-## React Compiler
+* _Typescript_
+* _HTML_
+* _CSS_
+* _React_
+* _JavaScript_
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Description
+_This is a simple imitation of a coffee site used by some businesses. It inherently lacks any ability to purchase coffee. This will track an item you selected, gather it's pounds, and adds a total to a cart to purchase. This is a offline only version, that only excels at simple product handling. If you run out of pounds, then you will be unable to purchase the item._
 
-## Expanding the ESLint configuration
+_This is not a finished product. More work will be done at a future date to expand functionality, including a "Save Order" feature, a version of purchase handling, and expanding the products offered. At this time, this project is only focusing on the criteria given to me by the independent project. When this application is updated, this will be updated in turn._
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Set-Up / Installation Guide
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* You will need [Node.Js](#), [Typescript](#), and [nvm](#) to run this program.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1. _Clone the repository to a folder of your choice, on your device. You can do this by using the "Code" button, or by using the terminal and typing and executing the following: "git clone https://github.com/JButch-99/react-ip"_
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. _Using any terminal application such GitBash or Windows Command Prompt for example, navigate to the top level of the program's folder and run "npm install". Please note, this will take some time._
 
-```
+3. _Now, please run "npm run build" to generate the program._
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+4. _Once built and generated, please use "npm run start" to open and use the newly made program._
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+5. _You also have the option to use "npm run test" to check for bugs with the code or any issues._
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Known Bugs
+* _Currently CSS spacing issues. Will be fixed at a later date._
 
-```
+## License
+[MIT License](license.txt)
