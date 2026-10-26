@@ -12,6 +12,28 @@
 * _React_
 * _JavaScript_
 
+## Components & Images
+
+#### _Below is a list of some of the components and images used for this project._
+
+### Image Links:
+#### _NOTE: Rest can be found in the assets file._
+
+* [Body Layout](././src/assets/body_layout.png)
+* [Company Logo](././src/assets/fake.jpg)
+* [Product Layout (Rough)](././src/assets/product.png)
+
+
+### Component Diagram and Wire Frame
+
+#### Component Diagram
+![Component Diagram](././src/assets/Component_Diagram.png)
+
+#### Wire Frame
+
+![](././src/assets/body_layout.png)
+
+
 ## Description
 _This is a simple imitation of a coffee site used by some businesses. It inherently lacks any ability to purchase coffee. This will track an item you selected, gather it's pounds, and adds a total to a cart to purchase. This is a offline only version, that only excels at simple product handling. If you run out of pounds, then you will be unable to purchase the item._
 
