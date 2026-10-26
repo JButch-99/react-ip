@@ -36,7 +36,7 @@ function ListCartItems({cartList, onChangingPounds, onRemoveItem, onClear}:CartB
         {cartList.length === 0 && confirm && (
           <div className="tithe">
             <h1>Thank you!</h1><br/>
-            <p>Your balance is: ${balance}</p>
+            <p>Your total is: ${balance}</p>
             <button onClick={() => setConfirm(false)}>Close Me!</button>
           </div>
         )}
