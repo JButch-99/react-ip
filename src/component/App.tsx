@@ -1,5 +1,5 @@
 import './../css/App.css'
-import Heading from './logo'
+import Heading from './Heading'
 import ProductControlHub from './ProductHub'
 
 function App() {

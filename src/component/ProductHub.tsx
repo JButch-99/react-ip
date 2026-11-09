@@ -1,9 +1,9 @@
 import { useState } from "react";
-import NewSubmissionForm from "./form";
+import NewSubmissionForm from "./NewSubmissionForm";
 import { type CartItem, type ProductInfo  } from "./type";
-import OptionBar from "./optionbars";
-import ProductDetailed from "./ProductDetail";
-import ListCartItems from "./CartBar";
+import OptionBar from "./OptionBar";
+import ProductDetailed from "./ProductDetailed";
+import ListCartItems from "./ListCartItems";
 
 function ProductControlHub() {
   const [cartList, setCartList] = useState<CartItem[]>([]);

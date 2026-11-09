@@ -1,6 +1,6 @@
 import { type SubmitEvent } from "react";
 import { type ProductInfo } from "./type";
-import GraftedForm from "./ReuseForm";
+import GraftedForm from "./GraftedForm";
 type newSubmissionFormProps = {
   onSubmitItem: (product: ProductInfo, pounds: number) => void;
   product: ProductInfo | null
