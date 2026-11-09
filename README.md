@@ -49,7 +49,7 @@ _This is not a finished product. More work will be done at a future date to expa
 
 3. _Now, please run "npm run build" to generate the program._
 
-4. _Once built and generated, please use "npm run start" to open and use the newly made program._
+4. _Once built and generated, please use "npm run dev" to open and use the newly made program._
 
 5. _You also have the option to use "npm run test" to check for bugs with the code or any issues._
 
